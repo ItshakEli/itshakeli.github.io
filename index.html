@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>קורס אסטרטגיית AI למנהלים - קיוטה הכשרת מנהלים</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --desert-brown: #8b6f47;
@@ -19,7 +21,11 @@
     --border: #d4c4b0;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   body {
     font-family: 'Assistant', 'Heebo', sans-serif;
@@ -29,7 +35,6 @@
     text-align: right;
   }
 
-  /* HEADER */
   header {
     background: var(--dark-wood);
     padding: 18px 40px;
@@ -41,13 +46,18 @@
     z-index: 100;
     box-shadow: 0 2px 20px rgba(93, 74, 53, 0.4);
   }
+
   .logo-text {
     color: var(--white);
     font-size: 1.1rem;
     font-weight: 700;
     line-height: 1.3;
   }
-  .logo-text span { color: var(--acme-orange); }
+
+  .logo-text span {
+    color: var(--acme-orange);
+  }
+
   header nav a {
     color: var(--white);
     text-decoration: none;
@@ -56,7 +66,12 @@
     opacity: 0.85;
     transition: opacity 0.2s;
   }
-  header nav a:hover { opacity: 1; color: var(--acme-orange); }
+
+  header nav a:hover {
+    opacity: 1;
+    color: var(--acme-orange);
+  }
+
   .header-cta {
     background: var(--acme-orange);
     color: var(--white) !important;
@@ -66,42 +81,52 @@
     opacity: 1 !important;
   }
 
-  /* HERO */
   .hero {
-    background: linear-gradient(135deg, rgba(93, 74, 53, 0.85) 0%, rgba(139, 111, 71, 0.75) 100%),
-                url('image_7f7b9d3a.png') center center / cover no-repeat;
+    background:
+      linear-gradient(135deg, rgba(93, 74, 53, 0.85) 0%, rgba(139, 111, 71, 0.75) 100%),
+      url('image_7f7b9d3a.png') center center / cover no-repeat;
+
     color: var(--white);
     padding: 120px 40px 100px;
     text-align: center;
     position: relative;
     overflow: hidden;
     min-height: 600px;
+
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .hero::before {
     content: '';
     position: absolute;
-    top: -60px; right: -60px;
-    width: 350px; height: 350px;
+    top: -60px;
+    right: -60px;
+    width: 350px;
+    height: 350px;
     background: radial-gradient(circle, rgba(230, 126, 61, 0.2) 0%, transparent 70%);
     border-radius: 50%;
   }
+
   .hero::after {
     content: '';
     position: absolute;
-    bottom: -80px; left: -80px;
-    width: 400px; height: 400px;
+    bottom: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, rgba(126, 180, 212, 0.15) 0%, transparent 70%);
     border-radius: 50%;
   }
+
   .hero-content {
     position: relative;
     z-index: 2;
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .hero-badge {
     display: inline-block;
     background: rgba(230, 126, 61, 0.25);
@@ -114,6 +139,7 @@
     letter-spacing: 0.5px;
     backdrop-filter: blur(5px);
   }
+
   .hero h1 {
     font-size: 3.2rem;
     font-weight: 900;
@@ -121,7 +147,11 @@
     margin-bottom: 12px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   }
-  .hero h1 span { color: var(--acme-orange); }
+
+  .hero h1 span {
+    color: var(--acme-orange);
+  }
+
   .hero h2 {
     font-size: 1.3rem;
     font-weight: 300;
@@ -129,6 +159,7 @@
     margin-bottom: 30px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   }
+
   .hero-meta {
     display: flex;
     justify-content: center;
@@ -136,6 +167,7 @@
     margin: 30px 0;
     flex-wrap: wrap;
   }
+
   .hero-meta-item {
     display: flex;
     flex-direction: column;
@@ -147,17 +179,18 @@
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.2);
   }
+
   .hero-meta-item .label {
     font-size: 0.8rem;
     opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
   }
+
   .hero-meta-item .value {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--acme-orange);
   }
+
   .hero-urgent {
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.25);
@@ -169,6 +202,7 @@
     font-weight: 600;
     backdrop-filter: blur(10px);
   }
+
   .hero-cta {
     display: inline-block;
     background: var(--acme-orange);
@@ -182,14 +216,21 @@
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 20px rgba(230, 126, 61, 0.5);
   }
+
   .hero-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(230, 126, 61, 0.7);
   }
 
-  /* SECTION STYLES */
-  section { padding: 70px 40px; }
-  .container { max-width: 1100px; margin: 0 auto; }
+  section {
+    padding: 70px 40px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
   .section-title {
     font-size: 2rem;
     font-weight: 800;
@@ -197,6 +238,7 @@
     margin-bottom: 12px;
     text-align: center;
   }
+
   .section-subtitle {
     color: var(--text-light);
     text-align: center;
@@ -206,14 +248,17 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   .orange-underline {
     display: inline-block;
     border-bottom: 3px solid var(--acme-orange);
     padding-bottom: 4px;
   }
 
-  /* ABOUT */
-  .about { background: var(--sand); }
+  .about {
+    background: var(--sand);
+  }
+
   .about-text {
     max-width: 860px;
     margin: 0 auto;
@@ -222,13 +267,16 @@
     color: var(--text);
     text-align: center;
   }
-  .about-text p { margin-bottom: 18px; }
 
-  /* STATS ROW */
+  .about-text p {
+    margin-bottom: 18px;
+  }
+
   .stats {
     background: var(--desert-brown);
     padding: 50px 40px;
   }
+
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -237,21 +285,23 @@
     margin: 0 auto;
     text-align: center;
   }
-  .stat-item { color: var(--white); }
+
+  .stat-item {
+    color: var(--white);
+  }
+
   .stat-num {
     font-size: 2.5rem;
     font-weight: 900;
     color: var(--acme-orange);
-    line-height: 1;
   }
+
   .stat-label {
     font-size: 0.9rem;
     opacity: 0.85;
     margin-top: 6px;
   }
 
-  /* TOPICS */
-  .topics { background: var(--white); }
   .topics-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,6 +309,7 @@
     max-width: 900px;
     margin: 0 auto;
   }
+
   .topic-item {
     display: flex;
     align-items: flex-start;
@@ -267,218 +318,179 @@
     background: var(--sand);
     border-radius: 10px;
     border-right: 4px solid var(--acme-orange);
-    font-size: 0.97rem;
     line-height: 1.5;
-    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .topic-item:hover {
-    transform: translateX(-3px);
-    box-shadow: 0 4px 15px rgba(230, 126, 61, 0.15);
-  }
-  .topic-icon { color: var(--acme-orange); font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
 
-  /* BENEFITS */
-  .benefits { background: var(--sand); }
+  .topic-icon {
+    color: var(--acme-orange);
+  }
+
+  .benefits {
+    background: var(--sand);
+  }
+
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    max-width: 1000px;
-    margin: 0 auto;
   }
+
   .benefit-card {
     background: var(--white);
     border-radius: 14px;
     padding: 28px 24px;
     box-shadow: 0 2px 15px rgba(139, 111, 71, 0.12);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 2px solid transparent;
   }
-  .benefit-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(139, 111, 71, 0.18);
-    border-color: var(--warm-tan);
-  }
+
   .benefit-icon {
-    width: 44px; height: 44px;
-    background: linear-gradient(135deg, var(--desert-brown), var(--warm-tan));
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-    color: var(--acme-orange);
+    font-size: 2rem;
+    margin-bottom: 12px;
   }
+
   .benefit-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--dark-wood);
     margin-bottom: 10px;
+    color: var(--dark-wood);
   }
+
   .benefit-card p {
-    font-size: 0.9rem;
     color: var(--text-light);
     line-height: 1.6;
   }
 
-  /* AUDIENCE */
-  .audience { background: var(--white); }
   .audience-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
   }
+
   .audience-card {
     background: var(--desert-brown);
     color: var(--white);
     border-radius: 12px;
     padding: 28px 18px;
     text-align: center;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.5;
-    transition: transform 0.2s;
     border: 2px solid var(--warm-tan);
   }
-  .audience-card:hover {
-    transform: translateY(-4px);
-    background: var(--dark-wood);
-  }
-  .audience-card .aud-icon { font-size: 2rem; margin-bottom: 12px; }
 
-  /* LECTURERS */
-  .lecturers { background: var(--sand); }
+  .aud-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .lecturers {
+    background: var(--sand);
+  }
+
   .lecturers-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0 auto;
   }
+
   .lecturer-card {
     background: var(--white);
     border-radius: 14px;
-    padding: 24px 18px;
+    padding: 30px 24px;
     text-align: center;
     box-shadow: 0 2px 12px rgba(139, 111, 71, 0.12);
-    border: 2px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .lecturer-card:hover {
-    border-color: var(--acme-orange);
-  }
-  .lecturer-avatar {
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--desert-brown), var(--warm-tan));
-    margin: 0 auto 16px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2rem;
-    color: var(--acme-orange);
-    font-weight: 700;
-    border: 3px solid var(--acme-orange);
-  }
-  .lecturer-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--dark-wood);
-    margin-bottom: 6px;
-  }
-  .lecturer-card .org {
-    font-size: 0.82rem;
-    color: var(--acme-orange);
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  .lecturer-card .role {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    line-height: 1.4;
-  }
-
-  /* WHY US */
-  .why { background: var(--white); }
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-    max-width: 880px;
-    margin: 0 auto;
-  }
-  .why-card {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    padding: 24px;
-    background: var(--sand);
-    border-radius: 12px;
-    border: 2px solid var(--warm-tan);
     transition: transform 0.2s;
   }
-  .why-card:hover {
-    transform: translateX(-3px);
-    border-color: var(--acme-orange);
+
+  .lecturer-card:hover {
+    transform: translateY(-4px);
   }
-  .why-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
+
+  .lecturer-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 18px;
+    border: 4px solid var(--acme-orange);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
   }
-  .why-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--dark-wood);
+
+  .lecturer-card h3 {
+    font-size: 1.2rem;
     margin-bottom: 8px;
+    color: var(--dark-wood);
   }
-  .why-card p {
-    font-size: 0.9rem;
+
+  .lecturer-card .org {
+    color: var(--acme-orange);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .lecturer-card .role {
     color: var(--text-light);
     line-height: 1.6;
   }
 
-  /* FORM */
-  .form-section {
-    background: linear-gradient(135deg, var(--dark-wood) 0%, var(--desert-brown) 100%);
-    color: var(--white);
-    padding: 70px 40px;
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
-  .form-section .section-title { color: var(--white); }
-  .form-section .section-subtitle { color: rgba(255,255,255,0.8); }
+
+  .why-card {
+    display: flex;
+    gap: 18px;
+    padding: 24px;
+    background: var(--sand);
+    border-radius: 12px;
+    border: 2px solid var(--warm-tan);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+  }
+
+  .why-card h3 {
+    margin-bottom: 8px;
+    color: var(--dark-wood);
+  }
+
+  .why-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .form-section {
+    background: linear-gradient(135deg, var(--dark-wood), var(--desert-brown));
+    color: var(--white);
+  }
+
+  .form-section .section-title {
+    color: var(--white);
+  }
+
   .form-box {
     max-width: 560px;
     margin: 0 auto;
     background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 16px;
     padding: 40px 36px;
-    backdrop-filter: blur(10px);
   }
-  .form-box input, .form-box select {
+
+  .form-box input {
     width: 100%;
     padding: 14px 16px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.12);
     color: var(--white);
-    font-family: 'Assistant', sans-serif;
-    font-size: 1rem;
     margin-bottom: 14px;
-    outline: none;
-    transition: border 0.2s;
     direction: rtl;
   }
-  .form-box input::placeholder { color: rgba(255,255,255,0.5); }
-  .form-box input:focus { border-color: var(--acme-orange); }
-  .form-box label {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 20px;
-    line-height: 1.5;
+
+  .form-box input::placeholder {
+    color: rgba(255,255,255,0.6);
   }
-  .form-box label input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
+
   .form-box button {
     width: 100%;
     background: var(--acme-orange);
@@ -486,26 +498,18 @@
     border: none;
     padding: 16px;
     border-radius: 8px;
-    font-family: 'Assistant', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .form-box button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 126, 61, 0.5);
   }
 
-  /* FOOTER */
   footer {
     background: #2d2217;
     color: rgba(255,255,255,0.6);
     padding: 30px 40px;
     text-align: center;
-    font-size: 0.9rem;
   }
-  footer a { color: var(--acme-orange); text-decoration: none; margin: 0 12px; }
+
   .footer-contact {
     display: flex;
     justify-content: center;
@@ -513,276 +517,228 @@
     margin-bottom: 16px;
     flex-wrap: wrap;
   }
-  .footer-contact span { display: flex; align-items: center; gap: 6px; }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .hero { padding: 80px 20px 60px; min-height: 500px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .topics-grid { grid-template-columns: 1fr; }
-    .benefits-grid { grid-template-columns: 1fr; }
-    .audience-grid { grid-template-columns: repeat(2, 1fr); }
-    .lecturers-grid { grid-template-columns: repeat(2, 1fr); }
-    .why-grid { grid-template-columns: 1fr; }
-    header nav { display: none; }
-    section { padding: 50px 20px; }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .topics-grid,
+    .benefits-grid,
+    .why-grid,
+    .lecturers-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .audience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    header nav {
+      display: none;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
   }
 </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo-text">
     <span>קיוטה</span> הכשרת מנהלים
   </div>
+
   <nav>
     <a href="#about">אודות הקורס</a>
     <a href="#topics">נושאי לימוד</a>
-    <a href="#lecturers">מרצים</a>
+    <a href="#lecturers">הצוות שלנו</a>
     <a href="#form" class="header-cta">להרשמה</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">📅 פתיחת הקורס 28.6.26 | קורס היברידי</div>
-    <h1>קורס אסטרטגיית <span>AI</span> למנהלים</h1>
-    <h2>קיוטה הכשרת מנהלים | קורסים מותאמים לתעשיית הבריאות</h2>
+
+    <div class="hero-badge">
+      📅 פתיחת הקורס 28.6.26 | קורס היברידי
+    </div>
+
+    <h1>
+      קורס אסטרטגיית <span>AI</span> למנהלים
+    </h1>
+
+    <h2>
+      קיוטה הכשרת מנהלים | קורסים מותאמים לתעשיית הבריאות
+    </h2>
+
     <div class="hero-meta">
+
       <div class="hero-meta-item">
         <span class="label">מפגשים</span>
         <span class="value">8 מפגשים</span>
       </div>
+
       <div class="hero-meta-item">
         <span class="label">שעות אקדמיות</span>
         <span class="value">48 שעות</span>
       </div>
+
       <div class="hero-meta-item">
         <span class="label">ימים ושעות</span>
         <span class="value">ימי א׳ | 16:00–20:30</span>
       </div>
+
       <div class="hero-meta-item">
         <span class="label">מתכונת</span>
         <span class="value">היברידית</span>
       </div>
+
     </div>
-    <div class="hero-urgent">⚡ ההרשמה לקורס הקרוב בעיצומה!</div>
+
+    <div class="hero-urgent">
+      ⚡ ההרשמה לקורס הקרוב בעיצומה!
+    </div>
+
     <br>
-    <a href="#form" class="hero-cta">להגשת מועמדות</a>
+
+    <a href="#form" class="hero-cta">
+      להגשת מועמדות
+    </a>
+
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
-    <h2 class="section-title"><span class="orange-underline">למה כל מנהל צריך AI?</span></h2>
+
+    <h2 class="section-title">
+      <span class="orange-underline">למה כל מנהל צריך AI?</span>
+    </h2>
+
     <div class="about-text">
-      <p>הקורס לבינה מלאכותית למנהלים של קיוטה הכשרת מנהלים מציע מסגרת מעמיקה ומעשית שנועדה לעזור למנהלים בתעשיית הבריאות להבין ולהטמיע את הכוח של הבינה המלאכותית לשיפור הביצועים העסקיים והגדלת הערך בארגון.</p>
-      <p>הקורס מספק חשיפה רחבה לא רק למושגי יסוד וכלים, אלא גם לפוטנציאל העצום של הטכנולוגיה ביצירת הזדמנויות עסקיות חדשות. המשתתפים ילמדו כיצד לנצל את הבינה המלאכותית בצורה מושכלת כדי לשדרג תהליכי עבודה, לייעל החלטות, ולמקסם את התרומה של המשאבים הקיימים בארגון.</p>
-      <p>תכני הקורס משולבים במפגשים עם מומחים מהתעשייה וסדנאות מעשיות המנחות את המשתתפים לאורך כל שלבי ההטמעה של בינה מלאכותית בארגון, כולל זיהוי ההזדמנויות הייחודיות לכל ארגון, ניהול תהליכים מבוססי נתונים והתגברות על אתגרים תרבותיים וארגוניים.</p>
+
+      <p>
+        הקורס לבינה מלאכותית למנהלים של קיוטה הכשרת מנהלים מציע מסגרת מעמיקה ומעשית שנועדה לעזור למנהלים להבין ולהטמיע את הכוח של הבינה המלאכותית בארגון.
+      </p>
+
+      <p>
+        המשתתפים ילמדו כיצד לנצל את הבינה המלאכותית בצורה מושכלת כדי לשדרג תהליכי עבודה, לייעל החלטות, ולמקסם את התרומה של המשאבים הקיימים בארגון.
+      </p>
+
+      <p>
+        תכני הקורס משלבים מומחים מהתעשייה, תרגולים מעשיים, מקרי בוחן וכלים אמיתיים להטמעת AI בארגון.
+      </p>
+
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat-item">
-      <div class="stat-num">8</div>
-      <div class="stat-label">מפגשים</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">48</div>
-      <div class="stat-label">שעות אקדמיות</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">פרקטי ויישומי</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">תעודה</div>
-      <div class="stat-label">מקצועית מוסמכת</div>
-    </div>
-  </div>
-</div>
-
-<!-- TOPICS -->
-<section class="topics" id="topics">
-  <div class="container">
-    <h2 class="section-title"><span class="orange-underline">נושאי לימוד מרכזיים</span></h2>
-    <p class="section-subtitle">נלמד כיצד לעבוד עם בינה מלאכותית (AI) בעולם הניהול</p>
-    <div class="topics-grid">
-      <div class="topic-item"><span class="topic-icon">✦</span> עקרונות וכלים מעשיים בשילוב AI בעולם הניהול</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> מהפכת ה-AI והשפעתה על עולם הניהול</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> פוטנציאל השפעתו האסטרטגית של AI על ארגונים</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> יישומים עסקיים ופתרונות מבוססי AI</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> ניתוח מקרי בוחן לשימוש ב-AI בארגונים</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> ניהול מבוסס נתונים ככלי לניהול מתקדם</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> ניהול סיכונים ואתיקה בשימוש ב-AI</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> שילוב אוטומציות וצ'טבוטים בתהליכי עבודה קיימים</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> יצירת מערכת AI פנים-ארגונית</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> השפעת ה-AI על ניהול הון אנושי וגיוס</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> השפעת ה-AI על ניהול פיננסי ותקציב בארגון</div>
-      <div class="topic-item"><span class="topic-icon">✦</span> כתיבת אסטרטגיה ותוכנית עבודה לשילוב AI בארגון</div>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFITS -->
-<section class="benefits">
-  <div class="container">
-    <h2 class="section-title"><span class="orange-underline">מה תקבלו</span></h2>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">🎯</div>
-        <h3>הבנה אסטרטגית של AI</h3>
-        <p>כלים לזיהוי וניתוח השפעת ה-AI על תהליכים ארגוניים ואסטרטגיים.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">⚙️</div>
-        <h3>מיומנויות יישומיות</h3>
-        <p>התנסות מעשית בכלים מתקדמים, אוטומציות וצ'טבוטים לשיפור תהליכים.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🗺️</div>
-        <h3>אסטרטגיה מותאמת אישית</h3>
-        <p>יכולת לפתח אסטרטגיה ותוכנית עבודה מותאמת לשילוב AI בארגון שלכם.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🛡️</div>
-        <h3>ניהול סיכונים ואתיקה</h3>
-        <p>הבנה בנושאי סיכון, פרטיות ואבטחת מידע בשימושי AI.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">📊</div>
-        <h3>ניהול מבוסס נתונים</h3>
-        <p>הבנה כיצד לנתח ולנהל תהליכים עסקיים בעזרת נתונים שנאספו באמצעות AI.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🏥</div>
-        <h3>התמחות בתעשיית הבריאות</h3>
-        <p>תכנים מותאמים לאתגרים הייחודיים של מנהלים בתחום הבריאות, בתי חולים, קופות חולים וחברות מדטק.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIENCE -->
-<section class="audience">
-  <div class="container">
-    <h2 class="section-title"><span class="orange-underline">למי מתאים הקורס?</span></h2>
-    <div class="audience-grid">
-      <div class="audience-card">
-        <div class="aud-icon">👔</div>
-        מנהלים בדרג ביניים ובכיר
-      </div>
-      <div class="audience-card">
-        <div class="aud-icon">💡</div>
-        מובילי חדשנות ודיגיטל בארגונים
-      </div>
-      <div class="audience-card">
-        <div class="aud-icon">📈</div>
-        אנשי אסטרטגיה, תפעול, משאבי אנוש ופיננסים
-      </div>
-      <div class="audience-card">
-        <div class="aud-icon">🔄</div>
-        יועצים ומובילי שינוי ארגוני
-      </div>
-      <div class="audience-card">
-        <div class="aud-icon">🤖</div>
-        בעלי תפקידים המעוניינים להטמיע כלי AI בעבודתם
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LECTURERS -->
 <section class="lecturers" id="lecturers">
   <div class="container">
-    <h2 class="section-title"><span class="orange-underline">המרצה שלנו</span></h2>
-    <p class="section-subtitle">מומחה מוביל בתחום הבריאות והטכנולוגיה</p>
-    <div style="display:flex; justify-content:center;">
-      <div class="lecturer-card" style="max-width:320px; width:100%; padding:40px 32px;">
-        <div class="lecturer-avatar" style="width:100px;height:100px;font-size:2.4rem;">יה</div>
-        <h3 style="font-size:1.3rem;">יצחק אלי</h3>
-        <div class="org" style="font-size:1rem;">מנכ"ל ו-CTO</div>
-        <div class="role" style="font-size:0.9rem; margin-top:10px;">מומחה בינה מלאכותית ואסטרטגיה דיגיטלית לתעשיית הבריאות</div>
+
+    <h2 class="section-title">
+      <span class="orange-underline">הצוות שלנו</span>
+    </h2>
+
+    <p class="section-subtitle">
+      מומחים מובילים בתחום הבינה המלאכותית, ההדרכה והטכנולוגיה
+    </p>
+
+    <div class="lecturers-grid">
+
+      <div class="lecturer-card">
+
+        <img
+          src="itshak_e.png"
+          alt="יצחק אלי"
+          class="lecturer-photo"
+        >
+
+        <h3>יצחק אלי</h3>
+
+        <div class="org">
+          מנכ"ל ו-CTO
+        </div>
+
+        <div class="role">
+          מומחה DevOps, AI ואסטרטגיה טכנולוגית לתעשיות מתקדמות
+        </div>
+
       </div>
+
+      <div class="lecturer-card">
+
+        <img
+          src="natali_y.jpeg"
+          alt="נטלי יחזקאל"
+          class="lecturer-photo"
+        >
+
+        <h3>נטלי יחזקאל</h3>
+
+        <div class="org">
+          מנהלת תכנית הדרכות
+        </div>
+
+        <div class="role">
+          מומחית לניהול תכניות הכשרה, פיתוח הדרכה והובלת תהליכי למידה
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- WHY -->
-<section class="why">
-  <div class="container">
-    <h2 class="section-title"><span class="orange-underline">מדוע לבחור בנו</span></h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🏆</div>
-        <div>
-          <h3>תעודה מקצועית</h3>
-          <p>בוגרי הקורסים מקבלים תעודה מקצועית מוסמכת המעניקה יתרון משמעותי בעולם התעסוקה בתחום הבריאות.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">👨‍🏫</div>
-        <div>
-          <h3>סגל מרצים</h3>
-          <p>המרצים משלבים ניסיון מקצועי מהשטח לצד ידע אקדמי מתקדם, מנהלים, יזמים ואנשי תעשייה מהשורה הראשונה.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🛠️</div>
-        <div>
-          <h3>פרקטיקה, לא רק תיאוריה</h3>
-          <p>הלמידה מבוססת על התנסות מעשית, עבודה עם כלים עדכניים, ניתוח מקרי בוחן וסימולציות מקצועיות.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🤖</div>
-        <div>
-          <h3>שילוב כלי AI</h3>
-          <p>כל אחת מהתכניות משלבת עבודה עם כלי AI עדכניים כחלק מהכשרה לעולם העבודה החדש.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORM -->
 <section class="form-section" id="form">
   <div class="container">
-    <h2 class="section-title">לפרטים והגשת מועמדות</h2>
-    <p class="section-subtitle">השאירו פרטים למידע נוסף על הקורס ולקביעת פגישת ייעוץ ללא עלות</p>
+
+    <h2 class="section-title">
+      לפרטים והגשת מועמדות
+    </h2>
+
+    <p class="section-subtitle">
+      השאירו פרטים למידע נוסף על הקורס
+    </p>
+
     <div class="form-box">
-      <input type="text" placeholder="שם מלא" />
-      <input type="tel" placeholder="טלפון" />
-      <input type="email" placeholder="אימייל" />
-      <label>
-        <input type="checkbox" />
-        אני מאשר/ת כי קראתי את מדיניות הפרטיות ואני מסכים/ה לתנאיה.
-      </label>
-      <button type="button">הצעד הבא בקריירה שלך ←</button>
+
+      <input type="text" placeholder="שם מלא">
+
+      <input type="tel" placeholder="טלפון">
+
+      <input type="email" placeholder="אימייל">
+
+      <button type="button">
+        הצעד הבא בקריירה שלך ←
+      </button>
+
     </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
+
   <div class="footer-contact">
     <span>📞 052-8763754</span>
-    <span>✉️ itshak.hillel@cloudinovations.com</span>
+    <span>✉️ itshak.eli@cloudinovations.com</span>
   </div>
-  <div>
-    <a href="#">מדיניות פרטיות</a>
-    <a href="#">הצהרת נגישות</a>
-  </div>
+
   <div style="margin-top:14px; opacity:0.4; font-size:0.8rem;">
-    © קיוטה הכשרת מנהלים | קורסים מותאמים לתעשיית הבריאות
+    © קיוטה הכשרת מנהלים
   </div>
+
 </footer>
 
 </body>
